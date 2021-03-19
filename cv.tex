@@ -1,0 +1,121 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+\usepackage[UTF8]{ctex}
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{支龙} % Your name
+% \address{黑龙江省哈尔滨市南岗区} % Your address
+%\address{123 Pleasant Lane \\ City, State 12345} % Your secondary addess (optional)
+\address{(+86)~155~0465~3947 \\ zhilong1550@gmail.com} % Your phone number and email
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{教育经历}
+
+{\bf 哈尔滨工业大学} \hfill {\em 2015年9月 - 至今} 
+\\ 专业：计算机科学与技术 \qquad 专业绩点：3.24/4\\
+核心课程：算法设计与分析（89）/快速原型系统设计（90）/操作系统（91）/软件设计与开发实践（86）/计算机视觉（88）/高级语言程序设计（100）/机器学习概论（83）\\
+  CET-6 
+
+%Minor in Linguistics \smallskip \\
+%Member of Eta Kappa Nu \\
+%Member of Upsilon Pi Epsilon \\
+
+
+\end{rSection}
+%----------------------------------------------------------------------------------------
+%	TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+
+
+% \\ \itab{Process Control (ongoing)} \tab{} \tab{Electrodynamics}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{语言和技能}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+  C/C++, MySQL, Python, HTML, Git 
+\end{tabular}
+
+\end{rSection}
+\begin{rSection}{项目经历}
+\begin{rSubsection}{GAN去模糊（Keras, Python）}{May. 2018}{}
+
+\begin{itemize}
+
+    \item 利用生成式对抗网络（GAN）对图片去模糊，数据集：GOPRO dataset。
+    \item 模型的设计中，生成器采用了9层ResNet blocks提高效率，接受模糊图形并进行上采样，对输出进行归一化处理。判别器为一层卷积层，为了改善收敛情况，使用了Wasserstein loss来对整个模型训练。
+
+    \item 生成结果用YOLO进行对象检测，去模糊后能够识别之前无法检测的图像，原物体的的检测程度有了10\%以上的提升。
+\end{itemize}
+
+\end{rSubsection}
+\begin{rSubsection}{接送通知系统（RFID, C）}{Jul. 2018}{}
+
+\begin{itemize}
+    \item 学生管理系统的子系统。该系统基于RFID技术，通过RFID感应器识别家长车载的RFID卡片进行通讯，实现家长接送孩子场景下的数据记录、信息通知等功能。
+    \item 主要负责底层逻辑设计，项目代码编写：解决了多个家长接送先后次序问题；缩减等待时间提高效率；设计卡片内编码格式（如高8位代表家长ID，低8位代表车牌号等）。
+    \item 系统最终效果：家长在远处刷卡终端即可通知孩子，且能正确处理多次刷卡，误接孩子等问题。
+
+\end{itemize}
+
+\end{rSubsection}
+
+%------------------------------------------------
+\begin{rSubsection}{
+预测汽车测试时间（Python，XGBoost）}{Jul. 2018}{}
+
+\begin{itemize}
+    \item kaggle赛题，要求通过汽车数据特征来预测检测车辆所需时间开销，该数据集只提供匿名标签。
+
+    \item 由于标签匿名，先作假设验证并筛选出对结果影响较大的重要标签。然后对数据进一步处理，如去掉常量标签，利用t检验去掉测试集和训练集均值差较大的标签。为了提高准确性，采用了不同的估计参数进行估计。训练集较小，因此采取交叉检验进行训练。
+    \item 模型效果达到前5\%。
+\end{itemize}
+
+\end{rSubsection}
+
+
+
+
+\end{rSection}
+
+
+%	EXAMPLE SECTION
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+
+
+
+
+
+
+\end{document}
